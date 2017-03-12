@@ -1,0 +1,43 @@
+{
+  "name": "typed-vue-loader",
+  "version": "0.0.0",
+  "author": "katashin",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/ktsn/typed-vue-loader",
+  "bugs": "https://github.com/ktsn/typed-vue-loader/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktsn/typed-vue-loader.git"
+  },
+  "scripts": {
+    "prepublish": "npm run clean && npm run lint && npm run build",
+    "clean": "rm -rf lib",
+    "build": "tsc -p src",
+    "lint": "tslint \"src/**/*.ts\" && tslint \"test/**/*.ts\"",
+    "example": "npm run build && webpack --config example/webpack.config.js",
+    "example:dev": "npm run build && webpack-dev-server --inline --hot --open --config example/webpack.config.js"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.4",
+    "ts-loader": "^2.0.1",
+    "tslint": "^4.4.2",
+    "tslint-config-ktsn": "^2.0.1",
+    "typescript": "^2.2.1",
+    "vue": "^2.2.2",
+    "vue-class-component": "^5.0.0",
+    "vue-loader": "^11.1.4",
+    "vue-template-compiler": "^2.2.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "typed-vue-template": "^0.1.1"
+  }
+}
