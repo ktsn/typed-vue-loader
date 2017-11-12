@@ -8,6 +8,9 @@ module.exports = {
     filename: '__build__.js'
   },
   resolve: {
+    alias: {
+      vue: 'vue/dist/vue.runtime.esm.js'
+    },
     extensions: ['.js', '.ts']
   },
   module: {

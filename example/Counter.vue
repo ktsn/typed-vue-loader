@@ -1,20 +1,26 @@
 <template>
   <div>
     <output>{{ counter }}</output>
-    <button @click="inc">+</button>
+    <button @click="inc(1)">+</button>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import Component from 'vue-class-component'
 
-@Component
-export default class Counter extends Vue {
-  counter = 0
+export default Vue.extend({
+  props: {},
 
-  inc () {
-    this.counter++
+  data () {
+    return {
+      counter: 0
+    }
+  },
+
+  methods: {
+    inc (amount: number): void {
+      this.counter += amount
+    }
   }
-}
+})
 </script>

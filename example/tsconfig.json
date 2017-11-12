@@ -8,10 +8,7 @@
       "es2015"
     ],
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true
+    "strict": true
   },
   "include": [
     "**/*.ts"
