@@ -17,7 +17,7 @@
     "url": "https://github.com/ktsn/typed-vue-loader.git"
   },
   "scripts": {
-    "prepublish": "npm run clean && npm run lint && npm run build",
+    "prepublishOnly": "npm run clean && npm run lint && npm run build",
     "clean": "rm -rf lib",
     "build": "tsc -p src",
     "lint": "tslint \"src/**/*.ts\" && tslint \"test/**/*.ts\"",
@@ -25,19 +25,19 @@
     "example:dev": "npm run build && webpack-dev-server --inline --hot --open --config example/webpack.config.js"
   },
   "devDependencies": {
-    "css-loader": "^0.26.4",
-    "ts-loader": "^2.0.1",
-    "tslint": "^4.4.2",
-    "tslint-config-ktsn": "^2.0.1",
-    "typescript": "^2.2.1",
-    "vue": "^2.2.2",
-    "vue-class-component": "^5.0.0",
-    "vue-loader": "^11.1.4",
-    "vue-template-compiler": "^2.2.2",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "css-loader": "^0.28.7",
+    "ts-loader": "^3.1.1",
+    "tslint": "^5.8.0",
+    "tslint-config-ktsn": "^2.1.0",
+    "typescript": "^2.6.1",
+    "vue": "^2.5.3",
+    "vue-class-component": "^6.1.0",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.3",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
-    "typed-vue-template": "^0.1.1"
+    "typed-vue-template": "^0.1.3"
   }
 }
