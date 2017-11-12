@@ -10,17 +10,21 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import Component from 'vue-class-component'
 import Counter from './Counter.vue'
 
-@Component({
+export default Vue.extend({
   components: {
     Counter
+  },
+
+  props: {},
+
+  data () {
+    return {
+      message: 'Hello typed template!'
+    }
   }
 })
-export default class App extends Vue {
-  message = 'Hello typed template!'
-}
 </script>
 
 <style scoped>
